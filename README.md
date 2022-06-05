@@ -4,7 +4,7 @@ Daily coding challenges to sharpen problem-solving skills
 
 **Website** https://www.codewars.com/
 
-![alt tag](https://www.codewars.com/packs/assets/logo.61192cf7.svg)
+<img alt="codewars logo" src="https://www.codewars.com/packs/assets/logo.61192cf7.svg" width=50%>
 
 ## How It's Made:
 
