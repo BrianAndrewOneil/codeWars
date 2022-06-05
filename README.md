@@ -6,10 +6,10 @@ Daily coding challenges to sharpen problem-solving skills
 
 <img alt="codewars logo" src="https://www.codewars.com/packs/assets/logo.61192cf7.svg" width=50%>
 
-## How It's Made:
+## How It's Made
 
-**Tech used:** All challenges completed in JavaScript
+**Tech used:** I completed all challenges in JavaScript.
 
-## Lessons Learned:
+## Lessons Learned
 
 These daily challenges help to keep my coding skills sharp.
