@@ -2,9 +2,7 @@
 //if that character appears only once in the original string, or ")" if that 
 //character appears more than once in the original string.
 function duplicateEncode(word){
-    word=word.split('')
-    //const l = 'e'
-    //return word.lastIndexOf(l)
+    word=word.toLowerCase().split('')
     return word.map((l,i,a)=>a.indexOf(l)===a.lastIndexOf(l)?'(':')').join('')
 }
 
