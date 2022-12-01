@@ -7,6 +7,7 @@ function fizzBuzz(n){
         else if(i%3===0) console.log('buzz')
         else console.log(i)
     }
+    return "that's it!"
 }
 
 console.log(fizzBuzz(12))
