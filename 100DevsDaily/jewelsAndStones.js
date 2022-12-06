@@ -7,6 +7,20 @@
 
 let numJewelsInStones=(j,s)=>s.split('').filter(i=>j.includes(i)).length
 
+//or, create object, will be more efficient for high-N
+function numJewelsInStones2(jewels,stones){
+    const map = {}
+    let count=0
+    for(const jewel of jewels){
+        map[jewel]=true
+    }
+    for(const stone of stones){
+        if(map[stone]){
+            count++
+        }
+    }return count
+}
 
-console.log(numJewelsInStones("aA", "aAAbbbb"), 3)
-console.log(numJewelsInStones("z", "ZZ"), 0)
+
+console.log(numJewelsInStones2("aA", "aAAbbbb"), 3)
+console.log(numJewelsInStones2("z", "ZZ"), 0)
