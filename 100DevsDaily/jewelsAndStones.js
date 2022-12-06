@@ -4,13 +4,8 @@
  * @param {string} stones
  * @return {number}
  */
- var numJewelsInStones = function(jewels, stones) {
-    let jewelCount=0
-    for (var i of stones){
-        if (jewels.includes(i)) jewelCount++
-    }
-    return jewelCount
-};
+
+let numJewelsInStones=(j,s)=>s.split('').filter(i=>j.includes(i)).length
 
 
 console.log(numJewelsInStones("aA", "aAAbbbb"), 3)
