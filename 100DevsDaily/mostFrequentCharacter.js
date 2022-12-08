@@ -2,12 +2,15 @@
 
 function maxCharacter(str){
     const map={}
-    for(const letter of str){
-        if (map[letter]){
-            map[letter]++
-        }else{
-            map[letter]=1
-        }
+    // for(const letter of str){
+    //     if (map[letter]){
+    //         map[letter]++
+    //     }else{
+    //         map[letter]=1
+    //     }
+    // } OR, get a load of this shorter version of the for loop to create the object:
+    for (const letter of str){
+        map[letter]=map[letter]+1 || 1
     }
     let maxVal=0, maxLetter =''
     for (const letter in map){
