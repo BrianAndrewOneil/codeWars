@@ -4,12 +4,21 @@ function maxCharacter(str){
     const map={}
     let maxChar=''
     for(const letter of str){
-        map[letter]=true
+        if (map[letter]){
+            map[letter]++
+        }else{
+            map[letter]=1
+        }
     }
-    for (const letter of str){
-        //loop here, check count of each, if new winner then set maxChar = to that char
+    let maxVal=0
+    let maxLetter =''
+    for (const letter in map){
+        if (map[letter]>maxVal){
+            maxVal=map[letter]
+            maxLetter='?'
+        }
     }
-
+    return maxLetter
 }
 
 console.log(maxCharacter("Hello World!"), "l")
