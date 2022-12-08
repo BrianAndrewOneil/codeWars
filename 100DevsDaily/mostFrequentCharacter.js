@@ -2,7 +2,6 @@
 
 function maxCharacter(str){
     const map={}
-    let maxChar=''
     for(const letter of str){
         if (map[letter]){
             map[letter]++
@@ -15,7 +14,7 @@ function maxCharacter(str){
     for (const letter in map){
         if (map[letter]>maxVal){
             maxVal=map[letter]
-            maxLetter='?'
+            maxLetter=letter
         }
     }
     return maxLetter
