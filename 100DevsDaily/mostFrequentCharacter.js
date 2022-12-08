@@ -9,8 +9,7 @@ function maxCharacter(str){
             map[letter]=1
         }
     }
-    let maxVal=0
-    let maxLetter =''
+    let maxVal=0, maxLetter =''
     for (const letter in map){
         if (map[letter]>maxVal){
             maxVal=map[letter]
