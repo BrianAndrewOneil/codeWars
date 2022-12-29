@@ -1,15 +1,19 @@
-//https://www.codewars.com/kata/550f22f4d758534c1100025a/train/javascript
+//Take an array of strings and return an array of strings with the needless directions removed (W<->E or S<->N side by side).
 
 function dirReduce(arr){
-  for(let i=0;i<arr.length;i++){
-    for(let h=i+1;h<arr.length;h++){
-        if(areOffset(arr[i],arr[h])){
-            arr[i]='x'
-            arr[h]='x'
+    let updated=1
+    while(updated>0){
+        updated=0
+        for(let i=0;i<arr.length;i++){
+            if(areOffset(arr[i],arr[i+1])){
+                arr[i]='x'
+                arr[i+1]='x' 
+                arr=arr.filter(w=>w!='x')
+                updated++
+            }
         }
     }
-  }
-  return arr.filter(w=>w!='x')
+    return arr
 }
 
 function areOffset(dir1,dir2){
