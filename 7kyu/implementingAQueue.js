@@ -1,17 +1,22 @@
-var Queue = function() {
-    this.queue=[]
-  };
-  
-  Queue.prototype.enqueue = function(item) {
-    this.push(item)
-  };
-  
-  Queue.prototype.dequeue = function() {
-    return this.shift()
-  };
-  
-  Queue.prototype.size = function() {
-    return this.length
-  };
+class Queue{
+    constructor(){
+      this.list=[]
+    }
+
+    size(){
+      return this.list.length
+    }
+
+    enqueue(item){
+      this.list.push(item)
+    }
+
+    dequeue(){
+      return this.list.shift()
+    }
+}
+
+let myList = new Queue
+console.log(myList)
 
   
