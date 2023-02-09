@@ -23,3 +23,5 @@ class Stack{
 const stack=new Stack()
 stack.push('apple')
 stack.push('plumb')
+
+console.log(stack)
