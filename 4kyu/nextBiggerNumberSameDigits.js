@@ -6,7 +6,7 @@
 const nextBigger = (n) => {
     if(n<10) return -1
     let result = [];
-    arrN=n.toString().split('')
+    let arrN=n.toString().split('')
   
     const permute = (arr, m = []) => {
       if (arr.length === 0) {
