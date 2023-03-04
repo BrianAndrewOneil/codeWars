@@ -6,7 +6,6 @@ function digPow(n, p){
         sum+=Math.pow(+i,p)
         p++
     }
-    //return sum
     return (sum%n===0 ? sum/n : -1)
 }
 
