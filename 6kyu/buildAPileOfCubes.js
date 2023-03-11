@@ -6,7 +6,6 @@ function findNb(m) {
     while (sum<m){
         i++
         sum+=(i*i*i)
-        //console.log(`sum=${sum}`)
     }
     return (sum===m? i : -1)
 }
