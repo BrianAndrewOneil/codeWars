@@ -26,11 +26,6 @@ function orderWeight(strng) {
 
     return sortable
     
-    
-    // return strng
-    // .split(' ')
-    // .sort( (a,b)=>(a.split('').reduce((acc,c)=>acc+c,0))-(b.split('').reduce((acc,c)=>acc+c,0)) )
-    // .join(' ')
 }
 
 console.log(orderWeight("103 123 4444 99 2000"), "2000 103 123 4444 99")
