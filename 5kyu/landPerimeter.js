@@ -1,3 +1,6 @@
+//Given an array arr of strings, complete the function by calculating the total perimeter of all the islands. 
+//Each piece of land will be marked with 'X' while the water fields are represented as 'O'. 
+
 function landPerimeter(arr) {
     let total=0, width=arr[0].length, height=arr.length
     function checkSquare(x,y){
