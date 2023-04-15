@@ -1,5 +1,6 @@
-//If the string already ends with a number, the number should be incremented by 1.
-//If the string does not end with a number. the number 1 should be appended to the new string.
+//Given a string, if the string already ends with a number, the number should be incremented by 1.
+//If the string does not end with a number, the number 1 should be appended to the new string.
+
 function isNumber(c) {
     return c >= '0' && c <= '9';
 }
