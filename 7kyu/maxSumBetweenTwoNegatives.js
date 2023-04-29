@@ -1,5 +1,6 @@
 //You have a list of integers. The task is to return the maximum sum of the elements located between two negative elements. 
 //No negative element should be present in the sum. If there is no such sum: -1
+//https://www.codewars.com/kata/6066ae080168ff0032c4107a/train/javascript
 function maxSumBetweenTwoNegatives(a) {
     let ans = -1
     let adding = false
