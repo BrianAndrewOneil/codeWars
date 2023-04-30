@@ -3,7 +3,10 @@
 //Whenever two keys share the same character, they should be compared numerically, and the larger key will keep that character. 
 
 const removeDuplicateIds = (obj) => {
-    let valueSet = new Set (Object.values(obj).flat())
+    let flatValues = Object.values(obj).reduce((acc,c)=>acc.concat(c))
+    let valueSet = new Set (flatValues)
+    //let valueSet = new Set (Object.values(obj).flat())
+    //note: the above line worked in VS Code, but not in Code Wars (error using "flat"), so I replaced it with the first two lines of code
     let keys = Object.keys(obj).reverse()
     let ans={}
     for (key of keys){
