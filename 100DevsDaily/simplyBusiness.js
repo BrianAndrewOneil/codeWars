@@ -19,6 +19,7 @@ function pairly(data){
     }
 }
 
+
 let cohort = {
     'student1': [101,102,202,204],
     'student2': [102,111,303],
