@@ -11,12 +11,24 @@ function pairly(data){
             sPairs.push([students[i],students[h]])
         }
     }
-    //the below creates an object with keys defined by the array
-    const ans = sPairs.reduce((acc,curr)=> (acc[curr]='',acc),{});
-    // console.log(ans)
+    //the line below creates a new object with keys defined by the array sPairs, and the values will be empty arrays
+    let ans1 = sPairs.reduce((acc,curr)=> (acc[curr]=[],acc),{});
+    let ans2 = sPairs.reduce((acc,curr)=> (acc[curr]=[],acc),{});
+
+    //solution #1, for each course loop thru each pair and check if both students in the pair took the course
     for (course of courses){
-        console.log(data[students[0]].includes(course))
+        for (pair of sPairs){
+            if(data[pair[0]].includes(course)&&data[pair[1]].includes(course)){
+                ans1[pair].push(course)
+            }
+        }
     }
+    //solution #2, populate ans with courses from both students from the original obj, then reduce
+    for (pair of sPairs){
+        ans2[pair].push(data[pair[0]])
+        ans2[pair].push(data[pair[1]])
+    }
+    return ([ans1,ans2])
 }
 
 
