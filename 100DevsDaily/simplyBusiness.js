@@ -15,7 +15,7 @@ function pairly(data){
     let ans1 = sPairs.reduce((acc,curr)=> (acc[curr]=[],acc),{});
     let ans2 = sPairs.reduce((acc,curr)=> (acc[curr]=[],acc),{});
 
-    //solution #1, for each course loop thru each pair and check if both students in the pair took the course
+    //solution #1, for each course loop thru each student pair and check if both students in the pair took the course
     for (course of courses){
         for (pair of sPairs){
             if(data[pair[0]].includes(course)&&data[pair[1]].includes(course)){
@@ -25,8 +25,11 @@ function pairly(data){
     }
     //solution #2, populate ans with courses from both students from the original obj, then reduce
     for (pair of sPairs){
-        ans2[pair].push(data[pair[0]])
-        ans2[pair].push(data[pair[1]])
+        //let matches=new Set(data[pair[0]])
+        //ans2 = (data[pair[1]]).filter(n=>!matches.has(n))
+        //console.log(matches)
+        let courseMatch = (data[pair[1]]).filter(n=>data[pair[0]].includes(n))
+        ans2[pair]=courseMatch    
     }
     return ([ans1,ans2])
 }
