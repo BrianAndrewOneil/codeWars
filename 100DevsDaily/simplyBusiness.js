@@ -23,7 +23,7 @@ function pairly(data){
             }
         }
     }
-    //solution #2, populate ans with courses from both students from the original obj, then reduce
+    //solution #2, populate ans with courses from both students from the original obj, then filter
     for (pair of sPairs){
         //let matches=new Set(data[pair[0]])
         //ans2 = (data[pair[1]]).filter(n=>!matches.has(n))
