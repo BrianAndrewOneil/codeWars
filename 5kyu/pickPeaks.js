@@ -1,4 +1,4 @@
-//Return the positions and the values of the "peaks" (or local maxima) of a numeric array
+//Return the positions and the values of the "peaks" (or local maxima) of a numeric array.
 function pickPeaks(arr){
     let ans = {}, trend = "start"
     var newPos, newPeak
