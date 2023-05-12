@@ -8,7 +8,6 @@ function travel (r,zipcode){
     let streets = list.map(i=>i.slice(0,-9)).map(i=>i.split(' '))
     streets = streets.map(x=>x.filter((c,i,a)=>i!=0).join(' ')).join(',')
     return (`${zipcode}:${streets}/${nums}`)
-    
 }
 
 const ad = "123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432,"
