@@ -4,5 +4,3 @@ mostLikely=(prob1,prob2)=>(prob1.split(':')[0]/prob1.split(':')[1]) > (prob2.spl
 
 console.log(mostLikely('1:3','1:2'),false)
 console.log(mostLikely('1:5','1:10'),true)
-
-console.log(mostLikely('1:3','1:2'),false)
