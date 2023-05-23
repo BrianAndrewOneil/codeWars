@@ -17,7 +17,8 @@ class PaginationHelper {
 	// returns the number of items on the current page. page_index is zero based. Return -1 for pageIndex values that are out of range
         if (pageIndex+1>this.pageCount()||pageIndex<0) return -1
         else if (pageIndex+1<this.pageCount()) return this.itemsPerPage
-        else return this.itemCount()%this.itemsPerPage
+        //else return this.itemCount()%this.itemsPerPage
+		else return this.itemCount()-(this.itemsPerPage*(this.pageCount()-1))
         
 	}
 	pageIndex(itemIndex) {
