@@ -13,7 +13,7 @@ function topThreeWords(text) {
     for (const word of text){
         map[word]=map[word]+1 || 1
     }
-    return Object.keys(map).sort(function(a, b) {return -(map[a] - map[b])}).slice(0,3)
+    return Object.keys(map).sort((a, b)=>-(map[a] - map[b])).slice(0,3)
 }
 
 console.log(topThreeWords("a a a  b  c c  d d d d  e e e e e"), ['e','d','a'])
