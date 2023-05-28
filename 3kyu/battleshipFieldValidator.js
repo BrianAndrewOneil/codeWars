@@ -3,7 +3,17 @@
 //Per player: Onee battleship (4 cells), 2 cruisers (3), 3 destroyers (2) and 4 submarines (1).
 //Ships cannot overlap or be in contact with any other ship.
 function validateBattlefield(field) {
-    // write your magic here
+    //first record all ships in each row
+    for (const row of field){
+        let ship = false
+        for (const square of row){
+            if (square===1){
+                if (ship===false){
+                    
+                }
+            }
+        }
+    }
 }
 
 
