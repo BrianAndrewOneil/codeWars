@@ -1,5 +1,5 @@
 //Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
-const doubleChar = (word) => word.split('').map(l=>l+l).join('')
+const doubleChar = (str) => str.split('').map(l=>l+l).join('')
 
 console.log(doubleChar("abcd"), "aabbccdd");
 console.log(doubleChar("Adidas"), "AAddiiddaass");
