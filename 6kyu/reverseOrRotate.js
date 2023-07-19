@@ -5,7 +5,14 @@
 function revrot(str, sz) {
     if (str===""||sz===0) return ""
     let ans = str.match(new RegExp('.{1,' + sz + '}', 'g')).filter(n=>n.length===sz)
-    return ans
+    
+    function update (s) {
+        if (s.split('').reduce( (acc,c)=>acc+c*c*c, 0 )%2===0) return s.split('').reverse().join('')
+        return (s.substring(1)+s[0])
+    }
+
+    
+    return ans.map(i=>update(i)).join('')
     
 }
 
