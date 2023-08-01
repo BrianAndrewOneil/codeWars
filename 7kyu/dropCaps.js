@@ -1,7 +1,7 @@
 //DropCaps means that the first letter of the starting word of the paragraph should be in caps and the remaining lowercase, just like you see in the newspaper.
 //But for a change, let"s do that for each and every word of the given String. Your task is to capitalize every word that has length greater than 2, leaving smaller words as they are.
 
-const dropCap = n => n.split(' ').map(w => w.toLowerCase()).map(w => w.length<3 ? w : w=(w[0].toUpperCase()+w.slice(-(w.length-1)))).join(' ')
+const dropCap = n => n.split(' ').map(w => w.length<3 ? w : w=(w[0].toUpperCase()+w.toLowerCase().slice(1))).join(' ')
 
 console.log(dropCap('Apple Banana'),"Apple Banana");
 console.log(dropCap('Apple'),"Apple");
