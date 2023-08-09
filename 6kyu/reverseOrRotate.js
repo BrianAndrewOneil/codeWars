@@ -11,9 +11,7 @@ function revrot(str, sz) {
         return (s.substring(1)+s[0])
     }
 
-    
     return ans.map(i=>update(i)).join('')
-    
 }
 
 console.log(revrot("123456987654", 6), "234561876549")
