@@ -14,9 +14,8 @@ var nato = (function() {
     }
     
     return function(word) {
-      ans = word.toUpperCase().split('').map(l=>letters[l]).join(' ')
-      
-      return ans
+        ans = word.toUpperCase().split('').map(l=>letters[l]).join(' ')
+        return ans
     }
 })()
 
