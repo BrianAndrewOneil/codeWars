@@ -4,12 +4,14 @@
 //https://www.codewars.com/kata/5886d65e427c27afeb0000c1/train/javascript
 
 function squareDigitsSequence(a0) {
-    let items = new Set()
-    while (!(items.has)){
-        let n = num.toString().split('')
-
-    }
-    
+    //let items = new Set()
+    //while (!(items.has)){
+    let arr = [a0]
+    while (arr) {
+        let next = arr[arr.length-1].toString().split('').reduce( (acc,c)=>acc+c*c,0 )
+        if (arr.includes(next)) return arr.length+1
+        else (arr.push(next))
+    } 
 }
 
 console.log( squareDigitsSequence(16) , 9)
