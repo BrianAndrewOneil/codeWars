@@ -1,5 +1,9 @@
+//https://www.codewars.com/kata/5aaae0f5fd8c069e8c00016e/train/javascript
 //Given an array of words and a target compound word, your objective is to find the two words which combine into the target word, 
 //returning both words in the order they appear in the array, and their respective indices in the order they combine to form the target word.
+
+
+//****WORKS, but fails long tests, needs to be more efficient */
 
 const arr1 = ['super','bow','bowl','tar','get','book','let', 'let'],
       arr2 = ['bow','crystal','organic','ally','rain','line'],
