@@ -8,17 +8,15 @@ function Fighter(name, health, damagePerAttack) {
 
 function declareWinner(fighter1, fighter2, firstAttacker) {
     var beingAttacked
-    if (fighter1==firstAttacker) beingAttacked==fighter2
-    else beingAttacked==fighter1
+    if (fighter1==firstAttacker) beingAttacked=fighter2
+    else beingAttacked=fighter1
     while(fighter1.health>0 && fighter2.health>0){
-        console.log([fighter1.health,fighter2.health])
         if (beingAttacked==fighter1) fighter1.health=fighter1.health-fighter2.damagePerAttack
         else fighter2.health=fighter2.health-fighter1.damagePerAttack
         if (beingAttacked==fighter1) beingAttacked=fighter2
         else beingAttacked=fighter1
     }
-    return ([fighter1.health, fighter2.health])
-    //(fighter1.health>0? fighter1.name : fighter2.name)
+    return (fighter1.health>0 ? fighter1.name : fighter2.name)
 }
 
 console.log(declareWinner(new Fighter("Lew", 10, 2), new Fighter("Harry", 5, 4), "Lew"), "Lew");
