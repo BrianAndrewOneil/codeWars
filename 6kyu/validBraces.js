@@ -20,19 +20,19 @@ function validBraces(braces){
     return(Object.values(map).reduce((acc,c)=>acc+c,0)===0?true:false)
 }
 
-console.log(validBraces("()))"), false);
-console.log(validBraces("()"), true);
-console.log(validBraces("[]"), true);
-console.log(validBraces("{}"), true);
-console.log(validBraces("(){}[]"), true);
-console.log(validBraces("([{}])"), true);
+// console.log(validBraces("()))"), false);
+// console.log(validBraces("()"), true);
+// console.log(validBraces("[]"), true);
+// console.log(validBraces("{}"), true);
+// console.log(validBraces("(){}[]"), true);
+// console.log(validBraces("([{}])"), true);
 console.log(validBraces("(}"), false);
 console.log(validBraces("[(])"), false);
-console.log(validBraces("({})[({})]"), true);
-console.log(validBraces("(})"), false);
-console.log(validBraces("(({{[[]]}}))"), true);
-console.log(validBraces("{}({})[]"), true);
-console.log(validBraces(")(}{]["), false);
-console.log(validBraces("())({}}{()][]["), false);
-console.log(validBraces("(((({{"), false);
-console.log(validBraces("}}]]))}])"), false);
+// console.log(validBraces("({})[({})]"), true);
+// console.log(validBraces("(})"), false);
+// console.log(validBraces("(({{[[]]}}))"), true);
+// console.log(validBraces("{}({})[]"), true);
+// console.log(validBraces(")(}{]["), false);
+// console.log(validBraces("())({}}{()][]["), false);
+// console.log(validBraces("(((({{"), false);
+// console.log(validBraces("}}]]))}])"), false);
