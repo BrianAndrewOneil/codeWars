@@ -3,7 +3,7 @@
 //If i is negative, start counting from the end of the array and work backwards.
 function portion(a,i,n){
     if (i>0 && i+n<=a.length){
-        return a.slice(i,(i+n))
+        return a.slice(i,i+n)
     }else if (i<0 && i+a.length-n>=0){
         return a.slice(i+a.length-n,i)
     }else return -1
