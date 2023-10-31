@@ -3,10 +3,11 @@
 
 function longestConsec(arr, k) {
     if (arr.length === 0 || k > arr.length || k <= 0) return ""
-    let ans=(arr[0].concat(arr[1]))
-    arr.forEach( (w,i,a)=>{
-        if (a[i+1]&&w.concat(a[i+1]).length>ans.length) ans=w.concat(a[i+1])
-    })
+    let ans = ''
+    for (let i=0;i<=arr.length-k;i++){
+        const possible = arr.slice(i,i+k).join('')
+        if (possible.length>ans.length) ans=possible
+    }
     return ans
 }
 
