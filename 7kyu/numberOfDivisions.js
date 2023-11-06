@@ -3,7 +3,7 @@
 const divisions = (n, divisor) => {
     ans = 0
     while (n>=divisor){
-        n=n/divisor
+        n=Math.floor(n/divisor)
         ans++
     }
     return ans
