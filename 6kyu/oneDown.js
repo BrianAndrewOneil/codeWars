@@ -6,13 +6,14 @@ function oneDown(str) {
     let letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     let answer = []
     str=str.split(' ').map((word,i,a) => {
-        let newWord = (word.split('').map((letter) => letter==="A" ? letter=letters.length : letter=letters.indexOf(letter)))
+        let newWord = (word.split('').map((letter) => letter==="A" ? letter=letters.length : letters.indexOf(letter)>0 ? letter=letters.indexOf(letter) : letter))
+        console.log(newWord)
         newWord = newWord.map(letter => letters.charAt(letter-1)).join('')
         answer.push(newWord)
     })
     return answer.join(' ')
 }
 
-console.log(oneDown("IfmmpA"), "Helloz");
-console.log(oneDown("Uif usjdl up uijt lbub jt tjnqmf"), "The trick to this kata is simple");
-console.log(oneDown(45), "Input is not a string");
+console.log(oneDown("IfmmpA;"), "Helloz;");
+// console.log(oneDown("Uif usjdl up uijt lbub jt tjnqmf"), "The trick to this kata is simple");
+// console.log(oneDown(45), "Input is not a string");
