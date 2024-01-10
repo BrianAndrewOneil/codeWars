@@ -15,5 +15,5 @@ function oneDown(str) {
 }
 
 console.log(oneDown("IfmmpA;"), "Helloz;");
-// console.log(oneDown("Uif usjdl up uijt lbub jt tjnqmf"), "The trick to this kata is simple");
+// console.log(oneDown("Uif usjdl up uijt lbub jt tjnqmf!"), "The trick to this kata is simple!");
 // console.log(oneDown(45), "Input is not a string");
