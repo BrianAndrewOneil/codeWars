@@ -3,7 +3,6 @@
 //5-10 inclusive: 5pts
 //less than 5: 10pts
 //If all radii are less than 5, award 100 BONUS POINTS!
-//https://www.codewars.com/kata/525dfedb5b62f6954d000006/train/javascript
 
 function scoreThrows(radii){
     let score = 0, bonus=true
