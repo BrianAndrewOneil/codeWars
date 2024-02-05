@@ -2,9 +2,9 @@
 //Create a method that can sort an array the way it would be sorted on Twisted-3-7.
 
 function sortTwisted37(array) {
-    let ans = array.map (i=>+(i.toString().replace('3','seven').replace('7','three').replace('three','3').replace('seven','7')))
+    let ans = array.map (i=>+(i.toString().replaceAll('3','seven').replaceAll('7','three').replaceAll('three','3').replaceAll('seven','7')))
     ans = ans.sort( (a,b) => a-b)
-    ans = ans.map (i=>+(i.toString().replace('3','seven').replace('7','three').replace('three','3').replace('seven','7')))
+    ans = ans.map (i=>+(i.toString().replaceAll('3','seven').replaceAll('7','three').replaceAll('three','3').replaceAll('seven','7')))
     return ans
 }
 
