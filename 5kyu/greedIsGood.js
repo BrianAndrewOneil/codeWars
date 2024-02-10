@@ -16,17 +16,19 @@ function score( dice ) {
     for (const num of dice){
         map[num]=map[num]+1 || 1
     }
-    //console.log(map)
     for (const num in map){
         if (map[num]>2){
             let numThree = Math.floor(map[num]/3)
-            console.log(`number of triplets for ${num} is: ${numThree}`)
-            //then add to score, and subtract from map[num]
-            
+            console.log(`number of triplets for ${num} is: ${numThree} and score is ${scoreThrees[num]}`)
+            score = score + numThree*scoreThrees[num]
+            map[num] = map[num]-numThree*3
         }
     }
+    if(map[1]) score=(score + map['1']*100)
+    if(map[5]) score=(score + map['5']*50)
+    return score
 }
 
-console.log( score( [2, 3, 4, 6, 2] ) == 0,   "Should be 0 :-(" );
-console.log( score( [4, 4, 4, 3, 3] ) == 400, "Should be 400" );
-console.log( score( [2, 4, 4, 5, 4] ) == 450, "Should be 450" );
+console.log( score( [2, 3, 4, 6, 2] ), "Should be 0 :-(" );
+console.log( score( [4, 4, 4, 3, 3] ), "Should be 400" );
+console.log( score( [2, 4, 4, 5, 4] ), "Should be 450" );
