@@ -7,7 +7,6 @@
 // Three 2's =>  200 points
 // One   1   =>  100 points
 // One   5   =>   50 point
-//https://www.codewars.com/kata/5270d0d18625160ada0000e4/train/javascript
 
 function score( dice ) {
     let score = 0
