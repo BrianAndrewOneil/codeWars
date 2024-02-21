@@ -9,7 +9,9 @@ function goodVsEvil(good, evil){
     let bPoints = [1,2,2,2,3,5,10]
     let goodScore = good.split(' ').map( (c,i,a) => c*gPoints[i] ).reduce( (acc,c) => acc+c,0 )
     let badScore = evil.split(' ').map( (c,i,a) => c*bPoints[i] ).reduce( (acc,c) => acc+c,0 )
-    return([goodScore,badScore])
+    return goodScore === badScore ? 'Battle Result: No victor on this battle field' 
+        : goodScore < badScore ? 'Battle Result: Evil eradicates all trace of Good'
+        : 'Battle Result: Good triumphs over Evil'
 }
 
 console.log(goodVsEvil('1 1 1 1 1 1', '1 1 1 1 1 1 1'), 'Battle Result: Evil eradicates all trace of Good');
