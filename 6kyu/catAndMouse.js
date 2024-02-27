@@ -7,11 +7,14 @@ function catMouse(x, j){
     let cIndex = x.indexOf('C')
     let dIndex = x.indexOf('D')
     let mIndex = x.indexOf('m')
-    if (Math.abs(cIndex-mIndex)-j<0) return "Escaped!"
-    //if ( (dIndex<cIndex&&dIndex>mIndex) || (dIndex>cIndex&&dIndex<mIndex) ) return "Escaped!"
+    if ( (dIndex<cIndex&&dIndex>mIndex) || (dIndex>cIndex&&dIndex<mIndex) ) return "Escaped!"
+    if (Math.abs(cIndex-mIndex)-j>0) return "Escaped!"
     return "Caught!"
 }
 
 console.log(catMouse('..D.....Cm', 13), "Caught!");
 console.log(catMouse('............C.............D..m...', 8), "Escaped!");
+console.log(catMouse('............C.D..m...', 8), "Escaped!");
+console.log(catMouse('............C.D..m...', 8), "Escaped!");
+console.log(catMouse('...m....D....C.......', 10), "Protected!");
 console.log(catMouse('m.C...', 5), "boring without all three");
