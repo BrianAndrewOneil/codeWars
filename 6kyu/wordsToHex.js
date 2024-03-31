@@ -3,6 +3,9 @@
 
 function wordsToHex(words) {
     let arr = words.split(' ').map(w=>w.slice(0,3))
+    arr = arr.map(w=>w.split('')
+        .map(l=>l.charCodeAt(0).toString(16)).join(''))
+        .map(w=>w.length==4 ? w='#'+w+'00' : w.length==2 ? w='#'+w+'0000' : '#'+w)
     return arr
 }
 
