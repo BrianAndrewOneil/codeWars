@@ -2,25 +2,25 @@
 // https://www.codewars.com/kata/58925dcb71f43f30cd00005f/train/javascript
 
 function latestClock(a, b, c, d) {
-    let nums = new Array(a,b,c,d).sort((a,b)=>b-a)
-    let ans
+    let nums = new Array(a,b,c,d)
+    let ans = []
 
-    const returnLargest = (n) => {
-        let x = 
+    const largest = (n) => {
+        let x
+        while (n>=0) {
+            if (nums.includes(n)){
+                x = nums.indexOf(n)
+                n = -1
+            }
+            n--
+        }
+        ans.push(nums[x])
+        nums[x]=-1
     }
 
-    if (nums.includes(2)) {
-        ans = '2'
-        nums[nums.indexOf(2)]=-1
-    }
-    if (nums.includes(1)) {
-        ans = '1'
-        nums[nums.indexOf(2)]=-1
-    }
-    else {
-        ans = '0'
-    }
-    //return nums.indexOf(2)
+    largest(2)
+    
+    return ans
 }
 
 console.log(latestClock(1, 9, 8, 3), "19:38")
