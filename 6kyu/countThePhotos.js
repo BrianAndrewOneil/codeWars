@@ -4,9 +4,21 @@
 //Return the total number of photos that were taken by the cameras. The complexity should be strictly O(N)
 
 function countPhotos(road){
-  
-    return 0;
-  
+    let camera=0, carLeft=0, carRight=0, photos=0
+    for (let i=0 ; i<road.length; i++) {
+        if (road[i]=='.'){
+            camera++
+            photos+=carRight
+        }
+        if (road[i]=='<'){
+            carLeft++
+            photos+=camera
+        }
+        if (road[i]=='>'){
+            carRight++
+        }
+    }
+    return photos;
 }
 
 console.log(countPhotos('>.>..<'), 8);
