@@ -1,4 +1,3 @@
-//https://www.codewars.com/kata/54dc6f5a224c26032800005c/train/javascript
 //A bookseller has lots of books classified in 26 categories labeled A, B, ... Z. Each book has a code c of 3, 4, 5 or more characters. 
 //The 1st character of a code is a capital letter which defines the book category.
 //Each code c is followed by a space and by a positive integer n (int n >= 0) which indicates the quantity of books of this code in stock.
@@ -6,22 +5,21 @@
 //find all the books of L with codes belonging to each category of M and to sum their quantity according to each category. 
 
 function stockList(listOfArt, listOfCat){
+    if (listOfArt.length==0 || listOfCat.length==0) return ""
     const map = {}
+    for (const letter of listOfCat) {
+        map[letter] = 0 
+    }
     for (const item of listOfArt) {
         let letter = item[0], num = +item.split(' ')[1]
-        if (map[letter]) {
-            map[letter] += num
-        }else {
-            map[letter] = num
-        }
+        map[letter] += num
         //console.log(`${letter} is now ${map[letter]}`)
-    }//console.log(map)
+    }
     let ans = []
     for (const elem of listOfCat) {
-        //ans.push(`${elem} : ${map[elem]}`)
         ans.push(`(${elem} : ${map[elem]})`)
     }
-    return ans.join(' - ').replace('undefined',0)
+    return ans.join(' - ')
 }
 
 let b,c,res
