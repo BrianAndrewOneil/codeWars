@@ -8,13 +8,16 @@ function rank(st, we, n) {
     if (st.length==0) return "No participants"
     if (n>st.split(',').length) return "Not enough participants"
     const map={}
-    let weight=0
-    for (const name of st.split(',')){
-        map[name]=(name.toUpperCase().split('').map(letter=>letter.charCodeAt(0)-64).reduce((acc,c)=>acc+c,0)+name.length)*we[weight]
+    let weNum=0
+    names = st.split(',')
+    for (const name of names){
+        map[name]=(name.toUpperCase().split('').map(letter=>letter.charCodeAt(0)-64).reduce((acc,c)=>acc+c,0)+name.length)*we[weNum]
+        weNum++
     }
-    return map
+    let place = (Object.values(map).sort((a,b)=>b-a))[n-1]
+    return place //map[place]
 }
-
+console.log(rank("COLIN,AMANDBA,AMANDAB,CAROL,PauL,JOSEPH", [1, 4, 4, 5, 2, 1], 4), "PauL")
 console.log(rank("Addison,Jayden,Sofia,Michael,Andrew,Lily,Benjamin", [4, 2, 1, 4, 3, 1, 2], 4), "Benjamin")
 console.log(rank("Lagon,Lily", [1, 5], 2), "Lagon")
 console.log(rank("Addison,Jayden,Sofia,Michael,Andrew,Lily,Benjamin", [4, 2, 1, 4, 3, 1, 2], 8), "Not enough participants")
