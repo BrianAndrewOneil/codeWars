@@ -4,7 +4,7 @@
 //The length of the firstname is added to the sum of these ranks hence a number sum.
 //An array of random weights is linked to the firstnames and each sum is multiplied by its corresponding weight to get what they call a winning number.
 
-function rank(st, we, n) { 
+function rank(st, we, n) {
     if (st.length==0) return "No participants"
     if (n>st.split(',').length) return "Not enough participants"
     const map={}
